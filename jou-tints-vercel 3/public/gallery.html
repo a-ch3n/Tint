@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/jpeg" href="/assets/logo.jpg">
+<title>Gallery — Recent Installs | Jou Tints Minneapolis</title>
+<meta name="description" content="Recent window tinting projects from Jou Tints. Ceramic, carbon, and dyed film installations across the Twin Cities.">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* CSS-generated install "photos" — gradients that suggest tinted glass */
+  .tile--art {
+    background:
+      linear-gradient(135deg, rgba(214,19,43,0.15), transparent 50%),
+      linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .tile--art::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+  .tile--art .car {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .tile--art svg {
+    width: 80%; height: auto;
+    color: rgba(237,237,234,0.4);
+    transition: color 0.4s, transform 0.5s;
+  }
+  .tile--art:hover svg {
+    color: var(--red);
+    transform: scale(1.08);
+  }
+  .tile--art .tag {
+    position: absolute;
+    top: 16px; left: 16px;
+    font-family: var(--mono);
+    font-size: 10px;
+    color: rgba(237,237,234,0.5);
+    letter-spacing: 0.2em;
+  }
+  .tile--art .vlt {
+    position: absolute;
+    top: 16px; right: 16px;
+    font-family: var(--display);
+    font-size: 22px;
+    color: var(--red);
+  }
+
+  /* Different gradient moods per tile */
+  .mood-1 { background: radial-gradient(ellipse at top right, rgba(214,19,43,0.2), #0a0a0a 70%); }
+  .mood-2 { background: linear-gradient(45deg, #0a0a0a, #1c1c1c 50%, #0a0a0a); }
+  .mood-3 { background: radial-gradient(circle at 30% 70%, rgba(214,19,43,0.15), #111 60%); }
+  .mood-4 { background: linear-gradient(180deg, #1a1a1a, #050505); }
+  .mood-5 { background: radial-gradient(ellipse at center, #1c1c1c, #050505 80%); }
+  .mood-6 { background: linear-gradient(135deg, #111, #2a2a2a 50%, #0a0a0a); }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav__logo"><img src="/assets/logo.jpg" alt="Jou Tints" class="nav__logo-img"><span class="nav__logo-text">JOU TINTS</span></a>
+  <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <ul class="nav__links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="gallery.html" class="active">Gallery</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav__cta">Free Quote →</a>
+</nav>
+
+<!-- PAGE HEAD -->
+<section class="page-head">
+  <div class="page-head__inner">
+    <div class="crumbs reveal"><a href="index.html">Jou Tints</a> <span class="sep">/</span> Gallery</div>
+    <h1>
+      <span class="reveal" data-delay="1" style="display:block">RECENT</span>
+      <span class="stroke reveal" data-delay="2" style="display:block">INSTALLS</span>
+    </h1>
+    <p class="lede reveal" data-delay="3" style="margin-top: 40px;">Two decades of glass, condensed into the work that walked out of our bay this month. Every install is shot under our standard three-angle lighting before keys are returned.</p>
+  </div>
+</section>
+
+<!-- GALLERY GRID -->
+<section class="section" style="padding-top: 80px;">
+  <div class="gallery scroll-reveal">
+
+    <div class="tile tile--big tile--art mood-1">
+      <span class="tag">GERMAN / SEDAN</span>
+      <span class="vlt">20% VLT</span>
+      <div class="car">
+        <svg viewBox="0 0 200 80" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 60 Q30 40 60 35 L130 30 Q160 30 175 50 L185 55 L185 65 L20 65 Z"/>
+          <circle cx="50" cy="65" r="8" fill="#0a0a0a" stroke="currentColor" stroke-width="2"/>
+          <circle cx="155" cy="65" r="8" fill="#0a0a0a" stroke="currentColor" stroke-width="2"/>
+          <path d="M65 40 L100 36 L130 36 L140 50 L60 50 Z" fill="rgba(214,19,43,0.3)"/>
+        </svg>
+      </div>
+      <div class="tile__label">FULL VEHICLE / CERAMIC</div>
+    </div>
+
+    <div class="tile tile--med tile--art mood-2">
+      <span class="tag">EV / COUPE</span>
+      <span class="vlt">5% VLT</span>
+      <div class="car">
+        <svg viewBox="0 0 200 80" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M30 60 Q40 38 80 32 L130 32 Q165 35 175 55 L180 60 L180 68 L30 68 Z"/>
+          <circle cx="60" cy="68" r="7" fill="#0a0a0a" stroke="currentColor" stroke-width="2"/>
+          <circle cx="155" cy="68" r="7" fill="#0a0a0a" stroke="currentColor" stroke-width="2"/>
+          <path d="M70 42 L100 38 L130 40 L140 52 L65 52 Z" fill="rgba(214,19,43,0.4)"/>
+        </svg>
+      </div>
+      <div class="tile__label">FRONT TWO + WINDSHIELD</div>
+    </div>
+
+    <div class="tile tile--small tile--art mood-3">
+      <span class="tag">SUV</span>
+      <span class="vlt">15% VLT</span>
+      <div class="car">
+        <svg viewBox="0 0 200 80" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 65 Q25 35 50 30 L150 28 Q175 30 180 50 L185 60 L185 70 L20 70 Z"/>
+          <circle cx="50" cy="70" r="8" fill="#0a0a0a" stroke="currentColor" stroke-width="2"/>
+          <circle cx="155" cy="70" r="8" fill="#0a0a0a" stroke="currentColor" stroke-width="2"/>
+          <path d="M58 38 L95 33 L150 33 L160 55 L55 55 Z" fill="rgba(214,19,43,0.35)"/>
+        </svg>
+      </div>
+      <div class="tile__label">FULL VEHICLE / CARBON</div>
+    </div>
+
+    <div class="tile tile--small tile--art mood-4">
+      <span class="tag">TRUCK</span>
+      <span class="vlt">35% VLT</span>
+      <div class="car">
+        <svg viewBox="0 0 200 80" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15 65 L40 30 L100 30 L110 50 L185 50 L185 70 L15 70 Z"/>
+          <circle cx="45" cy="70" r="8" fill="#0a0a0a" stroke="currentColor" stroke-width="2"/>
+          <circle cx="155" cy="70" r="8" fill="#0a0a0a" stroke="currentColor" stroke-width="2"/>
+          <path d="M45 35 L75 32 L100 32 L107 48 L40 48 Z" fill="rgba(214,19,43,0.3)"/>
+        </svg>
+      </div>
+      <div class="tile__label">FRONT TWO / CERAMIC</div>
+    </div>
+
+    <div class="tile tile--small tile--art mood-5">
+      <span class="tag">SPORTS</span>
+      <span class="vlt">20% VLT</span>
+      <div class="car">
+        <svg viewBox="0 0 200 80" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M25 62 Q35 45 70 38 L140 38 Q170 40 180 58 L185 62 L185 68 L25 68 Z"/>
+          <circle cx="55" cy="68" r="7" fill="#0a0a0a" stroke="currentColor" stroke-width="2"/>
+          <circle cx="155" cy="68" r="7" fill="#0a0a0a" stroke="currentColor" stroke-width="2"/>
+          <path d="M75 45 L105 42 L135 44 L145 56 L70 56 Z" fill="rgba(214,19,43,0.5)"/>
+        </svg>
+      </div>
+      <div class="tile__label">FULL VEHICLE + WINDSHIELD</div>
+    </div>
+
+    <div class="tile tile--wide tile--art mood-6">
+      <span class="tag">LUXURY / SEDAN</span>
+      <span class="vlt">5% VLT</span>
+      <div class="car">
+        <svg viewBox="0 0 200 80" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 62 Q28 38 65 32 L140 30 Q170 32 180 52 L185 60 L185 68 L20 68 Z"/>
+          <circle cx="55" cy="68" r="8" fill="#0a0a0a" stroke="currentColor" stroke-width="2"/>
+          <circle cx="155" cy="68" r="8" fill="#0a0a0a" stroke="currentColor" stroke-width="2"/>
+          <path d="M70 40 L105 36 L140 38 L150 54 L65 54 Z" fill="rgba(214,19,43,0.45)"/>
+        </svg>
+      </div>
+      <div class="tile__label">FULL VEHICLE / CERAMIC LIMO</div>
+    </div>
+
+    <div class="tile tile--wide tile--art mood-1">
+      <span class="tag">CROSSOVER</span>
+      <span class="vlt">25% VLT</span>
+      <div class="car">
+        <svg viewBox="0 0 200 80" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 64 Q28 36 55 30 L150 30 Q175 32 182 52 L188 60 L188 68 L20 68 Z"/>
+          <circle cx="55" cy="68" r="8" fill="#0a0a0a" stroke="currentColor" stroke-width="2"/>
+          <circle cx="158" cy="68" r="8" fill="#0a0a0a" stroke="currentColor" stroke-width="2"/>
+          <path d="M62 40 L100 35 L150 35 L160 56 L60 56 Z" fill="rgba(214,19,43,0.35)"/>
+        </svg>
+      </div>
+      <div class="tile__label">FULL VEHICLE / CARBON</div>
+    </div>
+
+    <div class="tile tile--med tile--art mood-2">
+      <span class="tag">SEDAN</span>
+      <span class="vlt">35% VLT</span>
+      <div class="car">
+        <svg viewBox="0 0 200 80" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 62 Q30 40 65 34 L135 32 Q165 34 175 52 L185 60 L185 68 L20 68 Z"/>
+          <circle cx="55" cy="68" r="8" fill="#0a0a0a" stroke="currentColor" stroke-width="2"/>
+          <circle cx="155" cy="68" r="8" fill="#0a0a0a" stroke="currentColor" stroke-width="2"/>
+          <path d="M70 42 L100 38 L135 38 L145 54 L65 54 Z" fill="rgba(214,19,43,0.3)"/>
+        </svg>
+      </div>
+      <div class="tile__label">FRONT TWO / CARBON</div>
+    </div>
+
+    <div class="tile tile--big tile--art mood-3">
+      <span class="tag">EV / SUV</span>
+      <span class="vlt">15% VLT</span>
+      <div class="car">
+        <svg viewBox="0 0 200 80" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 65 Q25 30 55 28 L150 26 Q178 28 184 50 L188 60 L188 70 L20 70 Z"/>
+          <circle cx="55" cy="70" r="8" fill="#0a0a0a" stroke="currentColor" stroke-width="2"/>
+          <circle cx="158" cy="70" r="8" fill="#0a0a0a" stroke="currentColor" stroke-width="2"/>
+          <path d="M60 36 L100 30 L150 32 L162 54 L58 54 Z" fill="rgba(214,19,43,0.4)"/>
+        </svg>
+      </div>
+      <div class="tile__label">FULL VEHICLE / CERAMIC + SUNROOF</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<section class="cta-strip">
+  <h2>Want your car on this wall?</h2>
+  <p class="lede" style="color: rgba(255,255,255,0.85); margin: 0 auto 40px; max-width: 50ch;">Book your install. We'll shoot it under our gallery lights once it's done.</p>
+  <a href="contact.html" class="btn btn--primary" style="background: #0a0a0a;">Get a Quote <span class="arrow">→</span></a>
+</section>
+
+<footer class="footer">
+  <div class="footer__grid">
+    <div class="footer__brand">
+      <h3><span style="color:var(--red)">●</span> JOU TINTS</h3>
+      <p>Minneapolis's premium window tinting bay. Ceramic, carbon, and dyed film for everything from daily drivers to show cars. 20 years on glass.</p>
+    </div>
+    <div class="footer__col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="services.html">Front Two</a></li>
+        <li><a href="services.html">Full Vehicle</a></li>
+        <li><a href="services.html">Windshield</a></li>
+        <li><a href="services.html">Visor Strip</a></li>
+        <li><a href="services.html">Tint Removal</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html">Free Quote</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Visit</h4>
+      <ul>
+        <li><a href="contact.html">[YOUR STREET ADDRESS]<br>[CITY, STATE ZIP]</a></li>
+        <li><a href="tel:YOURPHONE">[YOUR PHONE]</a></li>
+        <li><a href="mailto:[YOUR@EMAIL.COM]">[YOUR@EMAIL.COM]</a></li>
+        <li>Tue–Fri: 8a–5p<br>Sat: 9a–2p</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© 2026 JOU TINTS</span>
+    <span>JOU TINTS · WINDOW TINTING</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
