@@ -1,4 +1,3 @@
-// /api/admin/quotes — GET list, PATCH/DELETE individual records
 const { sql, ensureSchema, checkAuth } = require('../_lib');
 
 module.exports = async (req, res) => {
@@ -9,8 +8,6 @@ module.exports = async (req, res) => {
   try {
     await ensureSchema();
 
-    // Parse :id from query string (Vercel passes it as ?id=N via vercel.json rewrites,
-    // OR we just check the URL ourselves)
     const url = new URL(req.url, `http://${req.headers.host}`);
     const idParam = url.searchParams.get('id');
 
