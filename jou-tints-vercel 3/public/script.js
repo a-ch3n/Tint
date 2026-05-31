@@ -1,4 +1,4 @@
-// Mobile nav toggle
+// Mobile nav toggle, FAQ accordion, scroll reveal, form submission
 document.addEventListener('DOMContentLoaded', () => {
   const burger = document.querySelector('.nav__burger');
   const links = document.querySelector('.nav__links');
