@@ -155,9 +155,7 @@
     gap: 16px;
     margin-bottom: 12px;
   }
-  .quote__field {
-    font-family: var(--sans);
-  }
+  .quote__field { font-family: var(--sans); }
   .quote__field .label {
     font-family: var(--mono);
     font-size: 10px;
@@ -293,6 +291,7 @@
             ${q.phone ? `<div class="quote__field"><div class="label">Phone</div><div class="value"><a href="tel:${q.phone}">${escapeHtml(q.phone)}</a></div></div>` : ''}
             ${q.email ? `<div class="quote__field"><div class="label">Email</div><div class="value"><a href="mailto:${q.email}">${escapeHtml(q.email)}</a></div></div>` : ''}
             ${q.vehicle ? `<div class="quote__field"><div class="label">Vehicle</div><div class="value">${escapeHtml(q.vehicle)}</div></div>` : ''}
+            ${q.vehicle_type ? `<div class="quote__field"><div class="label">Type</div><div class="value">${escapeHtml(q.vehicle_type)}</div></div>` : ''}
             ${q.package ? `<div class="quote__field"><div class="label">Package</div><div class="value">${escapeHtml(q.package)}</div></div>` : ''}
             ${q.film ? `<div class="quote__field"><div class="label">Film</div><div class="value">${escapeHtml(q.film)}</div></div>` : ''}
             ${q.darkness ? `<div class="quote__field"><div class="label">Darkness</div><div class="value">${escapeHtml(q.darkness)}</div></div>` : ''}
@@ -348,7 +347,7 @@
   });
 
   load();
-  setInterval(load, 30000); // auto-refresh every 30s
+  setInterval(load, 30000);
 </script>
 </body>
 </html>
