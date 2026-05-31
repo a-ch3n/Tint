@@ -23,7 +23,6 @@
   <a href="contact.html" class="nav__cta">Free Quote →</a>
 </nav>
 
-<!-- PAGE HEAD -->
 <section class="page-head">
   <div class="page-head__inner">
     <div class="crumbs reveal"><a href="index.html">Jou Tints</a> <span class="sep">/</span> Contact</div>
@@ -35,11 +34,9 @@
   </div>
 </section>
 
-<!-- CONTACT SECTION -->
 <section class="section">
   <div class="contact-grid scroll-reveal">
 
-    <!-- FORM -->
     <div>
       <div class="eyebrow">Quote form</div>
       <h2 class="display-3" style="margin-bottom: 40px;">Tell us about the car.</h2>
@@ -67,40 +64,49 @@
             <input type="text" id="vehicle" name="vehicle" placeholder="2023 BMW M3">
           </div>
           <div class="field">
-            <label for="package">Package interested in</label>
-            <select id="package" name="package">
-              <option>Not sure yet — recommend something</option>
-              <option>Front Two Windows</option>
-              <option>Full Vehicle</option>
-              <option>Full Vehicle + Windshield</option>
-              <option>Visor Strip Only</option>
-              <option>Windshield Only</option>
-              <option>Tint Removal</option>
+            <label for="vehicleType">Vehicle type</label>
+            <select id="vehicleType" name="vehicleType">
+              <option>Not sure</option>
+              <option>Coupe</option>
+              <option>Sedan</option>
+              <option>SUV</option>
+              <option>Truck</option>
             </select>
           </div>
         </div>
 
         <div class="form__row">
           <div class="field">
-            <label for="film">Film tier</label>
-            <select id="film" name="film">
-              <option>Recommend the right one</option>
-              <option>Dyed (entry)</option>
-              <option>Carbon (popular)</option>
-              <option>Ceramic (top tier)</option>
+            <label for="package">Package interested in</label>
+            <select id="package" name="package">
+              <option>Not sure yet — recommend something</option>
+              <option>Front Two</option>
+              <option>Full Vehicle</option>
+              <option>Brow Strip</option>
+              <option>Full + Windshield</option>
+              <option>Tint Removal</option>
             </select>
           </div>
           <div class="field">
-            <label for="darkness">Darkness preference</label>
-            <select id="darkness" name="darkness">
-              <option>Not sure — explain my options</option>
-              <option>5% (Limo)</option>
-              <option>15% (Dark)</option>
-              <option>20% (Medium)</option>
-              <option>35% (Light)</option>
-              <option>50% (MN legal front)</option>
+            <label for="film">Film tier</label>
+            <select id="film" name="film">
+              <option>Recommend the right one</option>
+              <option>Carbon (base)</option>
+              <option>Ceramic (+$80)</option>
             </select>
           </div>
+        </div>
+
+        <div class="field">
+          <label for="darkness">Darkness preference</label>
+          <select id="darkness" name="darkness">
+            <option>Not sure — explain my options</option>
+            <option>5% (Limo)</option>
+            <option>15% (Dark)</option>
+            <option>20% (Medium)</option>
+            <option>35% (Light)</option>
+            <option>50% (MN legal front)</option>
+          </select>
         </div>
 
         <div class="field">
@@ -114,7 +120,6 @@
       </form>
     </div>
 
-    <!-- INFO CARD -->
     <div>
       <div class="info-card">
         <h3>Visit the bay.</h3>
@@ -152,7 +157,6 @@
         </div>
       </div>
 
-      <!-- Quick CTA tiles -->
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 24px;">
         <a href="tel:YOURPHONE" style="background: var(--carbon); padding: 24px; text-align: center; transition: background 0.3s;">
           <div style="font-family: var(--narrow); font-size: 11px; letter-spacing: 0.2em; color: var(--red); margin-bottom: 8px;">CALL US</div>
@@ -168,55 +172,19 @@
   </div>
 </section>
 
-<!-- MAP / LOCATION VISUAL -->
-<section class="section section--dark" style="padding-top: 40px;">
-  <div class="section__header scroll-reveal">
-    <div class="section__number">B / LOCATION</div>
-    <div>
-      <div class="eyebrow">Find us</div>
-      <h2 class="display-2">University Ave SE.</h2>
-    </div>
-  </div>
-
-  <!-- Stylized "map" panel - solid placeholder since we don't have Google Maps API -->
-  <div class="scroll-reveal" style="position: relative; aspect-ratio: 21/9; background: #0d0d0d; border: 1px solid rgba(255,255,255,0.08); overflow: hidden;">
-    <!-- grid -->
-    <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px); background-size: 40px 40px;"></div>
-    <!-- "roads" -->
-    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 100 50" preserveAspectRatio="none">
-      <path d="M0 30 Q30 28 50 25 T100 22" stroke="rgba(214,19,43,0.6)" stroke-width="0.5" fill="none"/>
-      <path d="M20 0 L25 50" stroke="rgba(237,237,234,0.15)" stroke-width="0.3" fill="none"/>
-      <path d="M70 0 L65 50" stroke="rgba(237,237,234,0.15)" stroke-width="0.3" fill="none"/>
-      <path d="M0 10 L100 15" stroke="rgba(237,237,234,0.15)" stroke-width="0.3" fill="none"/>
-      <path d="M0 40 L100 38" stroke="rgba(237,237,234,0.15)" stroke-width="0.3" fill="none"/>
-    </svg>
-    <!-- pin -->
-    <div style="position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
-      <div style="width: 24px; height: 24px; background: var(--red); border-radius: 50%; box-shadow: 0 0 30px var(--red-glow); position: relative; margin: 0 auto 12px;">
-        <div style="position: absolute; inset: -10px; border: 1px solid var(--red); border-radius: 50%; animation: pulse 2s ease-in-out infinite;"></div>
-      </div>
-      <div style="font-family: var(--display); font-size: 20px; letter-spacing: 0.05em;">JOU TINTS</div>
-      <div style="font-family: var(--mono); font-size: 11px; color: rgba(237,237,234,0.5); letter-spacing: 0.15em; margin-top: 4px;">2417 UNIVERSITY AVE SE</div>
-    </div>
-    <!-- corner labels -->
-    <div style="position: absolute; top: 16px; left: 16px; font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em; color: rgba(237,237,234,0.3);">N ↑</div>
-    <div style="position: absolute; bottom: 16px; right: 16px; font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em; color: rgba(237,237,234,0.3);">MINNEAPOLIS, MN</div>
-  </div>
-</section>
-
 <footer class="footer">
   <div class="footer__grid">
     <div class="footer__brand">
       <h3><span style="color:var(--red)">●</span> JOU TINTS</h3>
-      <p>Minneapolis's premium window tinting bay. Ceramic, carbon, and dyed film for everything from daily drivers to show cars. 20 years on glass.</p>
+      <p>Minneapolis's premium window tinting bay. Carbon and ceramic film for everything from daily drivers to show cars.</p>
     </div>
     <div class="footer__col">
       <h4>Services</h4>
       <ul>
         <li><a href="services.html">Front Two</a></li>
         <li><a href="services.html">Full Vehicle</a></li>
-        <li><a href="services.html">Windshield</a></li>
-        <li><a href="services.html">Visor Strip</a></li>
+        <li><a href="services.html">Brow Strip</a></li>
+        <li><a href="services.html">Full + Windshield</a></li>
         <li><a href="services.html">Tint Removal</a></li>
       </ul>
     </div>
