@@ -1,4 +1,3 @@
-// Shared helpers for all serverless API endpoints
 const { sql } = require('@vercel/postgres');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
@@ -6,7 +5,6 @@ const bcrypt = require('bcryptjs');
 const JWT_SECRET = process.env.SESSION_SECRET || 'change-me-in-production-please';
 const COOKIE_NAME = 'jou_admin';
 
-// Initialize the table on first request — Postgres is idempotent with IF NOT EXISTS
 let initialized = false;
 async function ensureSchema() {
   if (initialized) return;
@@ -17,6 +15,7 @@ async function ensureSchema() {
       phone TEXT,
       email TEXT,
       vehicle TEXT,
+      vehicle_type TEXT,
       package TEXT,
       film TEXT,
       darkness TEXT,
@@ -25,12 +24,12 @@ async function ensureSchema() {
       created_at TIMESTAMPTZ DEFAULT NOW()
     );
   `;
+  try { await sql`ALTER TABLE quotes ADD COLUMN IF NOT EXISTS vehicle_type TEXT`; } catch {}
   await sql`CREATE INDEX IF NOT EXISTS idx_quotes_status ON quotes(status);`;
   await sql`CREATE INDEX IF NOT EXISTS idx_quotes_created ON quotes(created_at DESC);`;
   initialized = true;
 }
 
-// --- Cookie helpers (no external session lib needed) ---
 function parseCookies(req) {
   const header = req.headers.cookie || '';
   return Object.fromEntries(
@@ -64,7 +63,6 @@ function checkAuth(req) {
   }
 }
 
-// --- Email (optional) ---
 async function sendNotificationEmail(quote) {
   if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.NOTIFY_EMAIL) return;
   try {
@@ -86,6 +84,7 @@ Name:     ${quote.name}
 Phone:    ${quote.phone || '(not given)'}
 Email:    ${quote.email || '(not given)'}
 Vehicle:  ${quote.vehicle || '(not given)'}
+Type:     ${quote.vehicleType || '(not given)'}
 Package:  ${quote.package || '(not specified)'}
 Film:     ${quote.film || '(not specified)'}
 Darkness: ${quote.darkness || '(not specified)'}
