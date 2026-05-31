@@ -1,4 +1,3 @@
-// POST /api/admin/login — authenticate admin
 const { bcrypt, setAuthCookie } = require('../_lib');
 
 const DEFAULT_HASH = '$2b$10$nA6gn73PMUHCAmkMyMu3e.jf1Cnfn.Ho.Xj3JDf1phjPPxhNEBf12'; // "changeme"
@@ -9,7 +8,6 @@ module.exports = async (req, res) => {
   }
 
   try {
-    // Accept both form-encoded and JSON
     const username = req.body.username;
     const password = req.body.password;
 
